@@ -1,7 +1,18 @@
-.nav{
-    position: relative;
+.navBar{
+    transition: all .5s ease-in;
+    @apply flex h-[6rem] lg:items-center justify-between py-[1.1rem] px-[3rem] bg-pink-200 bg-[var(--background-color)] border-b-[1px] border-[#c5c4c4]
 }
-.nav a::before{
+.logo{
+    @apply lg:text-[2.3rem] text-[2.1rem] font-bold font-[sans-serif]
+}
+.navBar__links{
+    @apply flex font-sans text-white lg:flex-row flex-col  lg:space-x-8 lg:space-y-0 space-y-10 lg:items-center lg:relative fixed right-0 top-0 bg-transparent bg-[#150E28]
+    lg:w-max w-[70%] lg:h-auto h-screen justify-center items-start pl-6
+}
+.navBar__rightA{
+    @apply lg:-right-0 -right-[70%] 
+}
+.navBar__links li a::before{
     position: absolute;
     content: '';
     height: 1px;
@@ -11,18 +22,32 @@
     transform-origin: bottom;
     transition: all .2s ease-in;
 }
-.nav a:hover::before{
+.navBar__links li a:hover::before{
     width: 100%;
+}
+@media screen and (max-width: 1024px) {
+    .navBar__links li a::before{
+        position: absolute;
+        content: '';
+        height: 1px;
+        width: 0;
+        bottom: -1px;
+        background-color: var(--header-color);
+    }
+    .navBar__links li a:hover::before{
+        width: 3rem;
+    }
+}
+.reg{
+    background-image: var(--primary-color);
+    @apply py-[.3rem] px-[1.2rem] rounded-md
+}
+.navBar__rightA .overlay{
+    @apply left-[100%]
 }
 .overlay{
-    position: fixed;
-    width: 100%;
-    height: 100vh;
-    top: 0;
-    left: 0;
-    background-color: rgb(#ec9eff);
-    z-index: 20;
+    @apply w-[30%] left-0 top-0 h-screen bg-purple-300 z-30 fixed backdrop-blur-[5px] bg-opacity-80 lg:hidden
 }
-.overlay.active{
-    display: block;
+.handBurger{
+    @apply lg:hidden block absolute top-[2rem] right-[2rem]
 }

@@ -4,6 +4,7 @@ function HomePage() {
   return (
     <div>
       <Navbar />
+      <Hero />
     </div>
   )
 }

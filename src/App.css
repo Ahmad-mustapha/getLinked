@@ -1,6 +1,6 @@
 :root {
     font-family: 'Montserrat';
-    --primary-color: linear-gradient(to right, #903AFF #fe34b9);
+    --primary-color: linear-gradient(to right, #903AFF, #fe34b9);
     --background-color: #150E28;
     --text-color: #903AFF;
     --header-color: #D434FE;

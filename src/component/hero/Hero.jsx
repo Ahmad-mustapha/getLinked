@@ -12,7 +12,7 @@ function Hero() {
         <img src={Vector} className='w-[10rem]'/>
       </div>
       <div className="getLinkedTechHackathon">
-        <div className="getLinkedTechHackathon__heading">
+        <div className="getLinkedTechHackathon__heading z-[99]">
           <p>getlinked Tech <br /> Hackathon<span>1.0</span></p>
           <div className="flex flex-row">
             <img className='w-[3rem]' src={Chain} alt="chain"/>

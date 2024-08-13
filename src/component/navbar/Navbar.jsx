@@ -6,61 +6,93 @@ import './navbar.css'
 function Navbar() {
   const [ toggle, setToggle ] = useState(false)
   const [ visible, setVisible ] = useState(false)
-  useEffect(() =>{
-    let prevS = window.pageYOffset
-    window.addEventListener('scroll', () =>{
-      let currentSc = pageYOffset
-      prevS > currentSc ? setVisible(false) : setVisible(true)
-      // console.log(prevS, currentSc);
-      prevS = currentSc
-    }, [])
-  })
-  const navObj = [
+  const navLinks = [
     {
+      id: 0,
       text: 'Timeline',
-      link: '/#timeline'
+      path: '/#timeline'
     },
     {
+      id: 1,
       text: 'Overview',
-      link: '/#overview'
+      path: '/#overview'
     },
     {
+      id: 2,
       text: 'FAQS',
-      link: '/#faqs'
+      path: '/#faqs'
     },
     {
+      id: 3,
       text: 'Contact',
-      link: '/contact'
+      path: '/contact'
     }
   ]
+
+  const Sidebar = () =>{
+    return(
+      <div className='p-[1.3rem] bg-transparent backdrop-blur-[10px] w-[350px] h-screen z-50 fixed top-0 right-0 flex flex-col space-y-[8rem] sidebar'>
+        <RxCross2 className='text-[1.5rem] text-white cursor-pointer' onClick={() => setToggle(false)}/>
+        <ul className='flex items-center justify-start flex-col space-y-10'>
+            {
+              navLinks.map((item, index) =>(
+                <li style={{position: 'relative'}} key={item.id}>
+                  {
+                  item.path.startsWith('/#') ? (
+                    <a className='line link' href={item.path}>{item.text}</a>
+                  ) :
+                  (
+                    <Link className='line link' to={item.path}>{item.text}</Link>
+                  )
+                  }
+                </li>
+              ))
+            }
+            <Link className='link reg'>Register</Link>
+          </ul>
+      </div>
+    )
+  }
+
   return (
     <>
       <div className='navBar'>
+      <div onClick={() => setToggle(false)} className={`${toggle ? 'overlay': 'hidden'}`}></div>
         <Link>
           <div className="logo">
             <h1 className='logo text-white'>get<span>Linked</span></h1>
           </div>
         </Link>
-        <div className={`navBar__links ${!toggle? `navBar__rightA`: 'navBar__links'}`}>
-          <div className="overlay"
-            onClick={() => setToggle(false)}
-          ></div>
-          {
-            navObj.map((item, i) =>(
-              i===3?(
-                <Link to={item.link} key={i}><ul><li className='relative'><a href="">{item.text}</a></li></ul></Link>
-              ):
-              (
-                <ul><li className='relative'><a className='' href={item.link}>{item.text}</a></li></ul>
-              )
-            ))
-          }
-          <Link><p className='reg'>Register</p></Link>
+        <div className='navBar__links'>
+          <ul className='flex items-center space-x-6'>
+            {
+              navLinks.map((item, index) =>(
+                <li style={{position: 'relative'}} key={item.id}>
+                  {
+                  item.path.startsWith('/#') ? (
+                    <a className='link line' href={item.path}>{item.text}</a>
+                  ) :
+                  (
+                    <Link className='link line' to={item.path}>{item.text}</Link>
+                  )
+                  }
+                </li>
+              ))
+            }
+          </ul>
+          <Link className='link reg'>Register</Link>
         </div>
         <div className="handBurger">
           {
-            !toggle ? <RiMenu4Fill className='text-[1.5rem] text-white cursor-pointer' onClick={() => setToggle(true)}/>:
-            <RxCross2  className='text-[1.5rem] text-white cursor-pointer' onClick={() => setToggle(false)}/>
+            !toggle && <RiMenu4Fill style={{cursor: 'pointer'}} className='text-[1.5rem] text-white cursor-pointer' onClick={() => setToggle(true)}/>
+            // <RxCross2  className='text-[1.5rem] text-white cursor-pointer' onClick={() => setToggle(false)}/>
+          }
+          {
+            toggle && (
+              <>
+                <Sidebar />
+              </>
+            )
           }
         </div>
       </div>

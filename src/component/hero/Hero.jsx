@@ -6,24 +6,32 @@ import HeroImage from '../../assets/hakathonGuy.png'
 import './hero.css'
 function Hero() {
   return (
-    <div className='getLinked__hero'>
+    <div className='getLinked__hero mt-[6rem] border-b-[1px] border-[#c5c4c4] overflow'>
       <div className="getLinked__heading-para">
-        <p className='text-white font-[sans-serif] lg:text-[1.7rem] text-[1.4rem] font-bold'><i>Igniting a Revolution in HR Innovation</i></p>
+        <p className='text-white font-[sans-serif] lg:text-[1.6rem] md:1.5rem text-[1.4rem] font-bold'><i>Igniting a Revolution in HR Innovation</i></p>
         <img src={Vector} className='w-[10rem]'/>
       </div>
-      <div className="getLinkedTechHackathon">
-        <div className="getLinkedTechHackathon__heading z-[99]">
-          <p>getlinked Tech <br /> Hackathon<span>1.0</span></p>
-          <div className="flex flex-row">
-            <img className='w-[3rem]' src={Chain} alt="chain"/>
-            <img className='w-[3rem]' src={Star} alt="star" />
+      <div className="hero flex lg:flex-row items-start justify-between">
+        <div className='col1 lg:w-3/6 w-full pl-[5rem]'>
+          <div className="getLinkedTechHackathon__heading flex items-end">
+            <p>getlinked Tech <br /> Hackathon<span>1.0</span></p>
+            <div className='flex'>
+              <span><img className='w-[3rem]' src={Chain} alt="star" /></span>
+              <span><img className='w-[3rem]' src={Star} alt="star" /></span>
+            </div>
+          </div>
+          <p className='text-[20px] text-white font-sans mt-4 w-max'>Participate in getlinked tech Hackathon 2023 stand <br /> a chance to win a Big prize</p>
+          <button className='font-sans text-white register'>Register</button>
+          <div className='flex items-center gap-4 mt-10 font-sans'>
+            <p className='text-white text-[35px]'>00<sub style={{fontSize: '.7rem'}}>H</sub></p>
+            <p className='text-white text-[35px]'>00<sub style={{fontSize: '.7rem'}}>M</sub></p>
+            <p className='text-white text-[35px]'>00<sub style={{fontSize: '.7rem'}}>S</sub></p>
           </div>
         </div>
-        <div className="heroImage">
-          <img src={HeroImage} alt="hakathonGuy" />
+        <div className="lg:w-3/6 w-full py-[3rem] px-[.5rem] h-screen overflow-y-hidden flex items-center text-center">
+          <img src={HeroImage} alt="hakathonGuy" className='h-screen w-full'/>
         </div>
       </div>
-      
     </div>
   )
 }

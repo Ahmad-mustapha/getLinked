@@ -10,6 +10,9 @@
     margin: 0;
     box-sizing: border-box;
 }
+body{
+   @apply bg-[var(--background-color)]
+}
 span{
     color: var(--header-color);
 }

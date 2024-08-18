@@ -20,11 +20,13 @@ const toggleFaq = (index) =>{
 
   return(
     <div 
-      // onClick={() => setopenFaq(!openFaq)}
+      
       className={`font-sans text-white`}>
      <ul>
         {questions.map((ques, index) => (
-          <li key={index} className='border-b-[1px] border-[#D434FE]'>
+          <li key={index} 
+          onClick={() => toggleFaq(index)}
+          className='border-b-[1px] border-[#D434FE]'>
             <div className='flex items-center justify-between pb-4 mt-8'>
               <p className='text-[14px]'>{ques.question}</p>
               <span>

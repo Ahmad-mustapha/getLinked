@@ -1,8 +1,18 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import AOS from 'aos'
+
 
 export const Timelinebreakdownleft = ({title, breakdown}) =>{
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1200,
+      once: true,
+    });
+  }, []);
+
   return(
-    <div className='flex flex-col text-left sm:text-right w-full sm:w-2/6 pl-[4rem] sm:pl-0'>
+    <div data-aos='fade-right' className='flex flex-col text-left sm:text-right w-full sm:w-2/6 pl-[4rem] sm:pl-0'>
       <p className='text-[#D434FE] text-[24px] font-[700]'>{title}</p>
       <p className='text-white text-[14px]'>{breakdown}</p>
     </div>
@@ -11,7 +21,7 @@ export const Timelinebreakdownleft = ({title, breakdown}) =>{
 
 export const Timelinebreakdownright = ({title, breakdown}) =>{
   return(
-    <div className='flex flex-col text-left w-full sm:w-2/6 pl-[4rem] sm:pl-0'>
+    <div  data-aos='fade-left'className='flex flex-col text-left w-full sm:w-2/6 pl-[4rem] sm:pl-0'>
       <p className='text-[#D434FE] text-[24px] font-[700]'>{title}</p>
       <p className='text-white text-[14px]'>{breakdown}</p>
     </div>
@@ -21,7 +31,7 @@ export const Timelinebreakdownright = ({title, breakdown}) =>{
 export const Timlinelist = ({num}) =>{
   return(
     // <div className=''>
-    <div className='absolute left-0 top-36 sm:top-30 lg:top-20 sm:left-[48%]'>
+    <div  data-aos='fade-down' className='absolute left-0 top-36 sm:top-30 lg:top-20 sm:left-[48%]'>
       <p className='h-[5rem] w-[.1rem] bg-[#D434FE] absolute left-[1.2rem] bottom-12'></p>
       <p className='text-white w-10 h-10 flex items-center justify-center rounded-full bg-[#D434FE] absolute bottom-0'>{num}</p>
     </div>
@@ -31,7 +41,7 @@ export const Timlinelist = ({num}) =>{
 
 export const Timelinedateleft = () =>{
   return(
-    <div className='w-full pl-[4rem] sm:pl-0 sm:w-2/6'>
+    <div  data-aos='fade-right'className='w-full pl-[4rem] sm:pl-0 sm:w-2/6'>
       <p className='text-[#D434FE] text-left sm:text-right text-[24px] font-[700]'>November 18, 2023</p>
     </div>
   )
@@ -39,7 +49,7 @@ export const Timelinedateleft = () =>{
 
 export const Timelinedateright = () =>{
   return(
-    <div className='w-full sm:w-2/6 pl-[4rem] sm:pl-0'>
+    <div data-aos='fade-left' className='w-full sm:w-2/6 pl-[4rem] sm:pl-0'>
       <p className='text-[#D434FE] text-left text-[24px] font-[700]'>November 18, 2023</p>
     </div>
   )

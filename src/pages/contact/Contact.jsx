@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Navbar } from '../../component/import'
 import { IoLogoInstagram } from "react-icons/io5";
 import { FaLinkedinIn } from "react-icons/fa";
@@ -6,14 +6,23 @@ import { FaXTwitter } from "react-icons/fa6";
 import { FaFacebookF } from "react-icons/fa";
 import { Link } from 'react-router-dom';
 import './contact.css'
+import AOS from 'aos'
 
 
 const Contact = () => {
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1200,
+      once: true,
+    });
+  }, []);
+
   return (
     <div>
       <Navbar />
       <div className='contactform font-sans py-4 px-2 lg:py-10 md:py-4 lg:px-28 md:px-20 flex flex-col md:flex-row items-center justify-center mt-[6em]'>
-        <div className='w-5/6 md:w-3/6'>
+        <div data-aos='fade-left' className='w-5/6 md:w-3/6'>
           <div className='md:flex flex-col hidden'>
             <div className='text-[16px] text-white flex flex-col gap-2 '>
               <h3 className='text-[32px] font-[700] text-[#D434FE]'>Get in touch</h3>
@@ -35,7 +44,7 @@ const Contact = () => {
             <p className='text-[16px] text-white'>Email us below to any question related to our event</p>
           </div>
         </div>
-        <div className='w-5/6 md:w-4/6 lg:w-3/6 md:p-16 border-none bg-transparent backdrop-blur-xl shadow-2xl'>
+        <div data-aos='fade-right' className='w-5/6 md:w-4/6 lg:w-3/6 md:p-16 border-none bg-transparent backdrop-blur-xl shadow-2xl'>
           <h2 className='text-[#D434FE] text-[20px] font-[600]'>Questions or need assistance?</h2>
           <p className='text-[#D434FE] text-[20px] font-[600]'>Let us know about it!</p>
           <form action="">

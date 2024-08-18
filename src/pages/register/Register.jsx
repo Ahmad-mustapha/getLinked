@@ -1,15 +1,23 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Navbar } from '../../component/import'
 import { Link } from 'react-router-dom'
 import Registerimg from '../../assets/registerimage.png'
+import AOS from 'aos'
 
 const Register = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1200,
+      once: true,
+    });
+  }, []);
+
   return (
     <div>
       <Navbar />
-      <div className='font-sans flex items-center flex-col md:flex-row mt-[7rem]'>
-        <div className='w-full md:w-4/6 lg:3/6'><img src={Registerimg} alt="" /></div>
-        <div className='w-5/6 md:w-4/6 lg:w-3/6 md:p-16 border-none bg-transparent backdrop-blur-xl shadow-2xl'>
+      <div className='font-sans flex items-center flex-col md:flex-row mt-[7rem] overflow-x-hidden'>
+        <div data-aos='fade-right' className='w-full md:w-4/6 lg:3/6'><img src={Registerimg} alt="" /></div>
+        <div data-aos='fade-left' className='w-5/6 md:w-4/6 lg:w-3/6 md:p-16 border-none bg-transparent backdrop-blur-xl shadow-2xl'>
           <h2 className='text-[#D434FE] text-[20px] font-[600]'>Questions or need assistance?</h2>
           <p className='text-[#D434FE] text-[20px] font-[600]'>Let us know about it!</p>
           <form action="">

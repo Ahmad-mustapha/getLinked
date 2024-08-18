@@ -16,9 +16,9 @@ export const Criteria = ({list, details}) =>{
 
 function Judging() {
   return (
-    <div className='px-8 py-[5rem] font-sans flex justify-between flex-col items-center md:flex-row overflow-x-hidden border-b-[1px] border-[#c5c4c4]'>
-      <div className='w-full md:w-5/6 judgeimage'><img src={Judge} alt="" /></div>
-      <div className='w-full md:w-3/6'>
+    <div className='px-8 py-[5rem] font-sans flex justify-between flex-col items-center md:flex-row overflow-x-hidden border-b-[1px] border-[#c5c4c4] overflow-hidden'>
+      <div data-aos="zoom-out" className='w-full md:w-5/6 judgeimage'><img src={Judge} alt="" /></div>
+      <div data-aos="fade-left" className='w-full md:w-3/6'>
         <h4 className='font-[700] text-white text-[24px] sm:text-[27px] md:text-[32px] md:text-left text-center mb-6'>Judging Criteria <br /><span className='text-[#D434FE]'> Key attributes</span></h4>
         <div className='relative flex flex-col space-y-4 sm:text-left text-center'>
           <Criteria 

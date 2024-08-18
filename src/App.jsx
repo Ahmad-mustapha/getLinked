@@ -1,9 +1,18 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import './App.css'
 import { HomePage, Contact, Registersuccess, Register } from './pages/import'
 import {BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
+
 function App() {
   const [count, setCount] = useState(0)
+  useEffect(() =>{
+    AOS.init({
+      duration: 1200, // Duration of animation in milliseconds
+      once: true,
+    })
+  }, [])
 
   return (
     <>

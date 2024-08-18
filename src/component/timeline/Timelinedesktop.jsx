@@ -1,10 +1,18 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Desktop } from './smallcomponents' 
+import AOS from 'aos'
 
 function Timelinedesktop() {
+  useEffect(() => {
+    AOS.init({
+      duration: 1200,
+      once: true,
+    });
+  }, []);
+
   return (
-    <div className='font-sans p-6 flex flex-col'>
-      <div className='text-white text-center mb-6'>
+    <div className='font-sans p-6 flex flex-col overflow-x-hidden'>
+      <div data-aos='fade-up' className='text-white text-center mb-6'>
         <h3 className='font-[700] text-[32px]'>Timeline</h3>
         <p className='text-[14px]'>Here is the breakdown of the time we anticipate <br /> using for the upcoming event.</p>
       </div>

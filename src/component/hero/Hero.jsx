@@ -28,7 +28,7 @@ function Hero() {
             <p className='text-white text-[35px]'>00<sub style={{fontSize: '.7rem'}}>S</sub></p>
           </div>
         </div>
-        <div className="lg:w-3/6  md:w-5/6 md:m-auto w-full py-[3rem] px-[.5rem] overflow-y-hidden flex items-center text-center md:mt-0 mt-[3rem]">
+        <div className="lg:w-3/6  md:w-5/6 md:m-auto w-full pt-[3rem] px-[.5rem] overflow-y-hidden flex items-center text-center md:mt-0 mt-[3rem]">
           <img src={HeroImage} alt="hakathonGuy" className='w-full'/>
         </div>
       </div>

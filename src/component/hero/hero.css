@@ -1,24 +1,24 @@
 .getLinked__hero{
-    @apply bg-[var(--background-color)]
+    @apply bg-[var(--background-color)] flex flex-col md:justify-center gap-10 md:gap-0
 }
 .getLinked__heading-para{
-    @apply flex items-end flex-col p-[1rem]
+    @apply flex items-end text-right md:text-center flex-col p-[1rem]
 }
 .getLinkedTechHackathon__heading p{
-    @apply text-white font-sans font-bold text-[3.5rem] leading-[4rem] mt-[2rem]
+    @apply text-white font-sans font-bold text-center md:text-left text-[1.7rem] sm:text-[2.4rem] md:text-[2.7rem] lg:text-[3.5rem] md:leading-[4rem] mt-[2rem]
 }
 .register{
     background-image: var(--primary-color);
-    @apply py-[.3rem] px-[1.2rem] rounded-md mt-6
+    @apply py-[.3rem] px-[1.6rem] rounded-md mt-6
 }
 @media screen and (max-width: 950px) {
     .hero{
         @apply flex-col
     }
     .col1{
-        @apply w-full flex flex-col items-center text-center
+        @apply w-full flex flex-col items-center text-center justify-center
     }
     .register{
-        @apply mb-[3rem] py-[.7rem] px-[3rem]
+        @apply mb-[2rem] py-[.7rem] px-[3rem]
     }
 }

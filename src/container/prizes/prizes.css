@@ -1,0 +1,7 @@
+.prizebg{
+    background-image: url('../../assets/purplebg.png');
+    background-position: -10%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border: none;
+}

@@ -48,7 +48,7 @@ function Navbar() {
                 </li>
               ))
             }
-            <Link className='link reg'>Register</Link>
+            <Link to='/register' className='link reg'>Register</Link>
           </ul>
       </div>
     )
@@ -59,7 +59,7 @@ function Navbar() {
       <div className='navBar'>
       <div onClick={() => setToggle(false)} className={`${toggle ? 'overlay': 'hidden'}`}></div>
         <Link>
-          <div className="logo">
+          <div className="">
             <h1 className='logo text-white'>get<span>Linked</span></h1>
           </div>
         </Link>
@@ -80,7 +80,7 @@ function Navbar() {
               ))
             }
           </ul>
-          <Link className='link reg'>Register</Link>
+          <Link to='/register' className='link reg'>Register</Link>
         </div>
         <div className="handBurger">
           {

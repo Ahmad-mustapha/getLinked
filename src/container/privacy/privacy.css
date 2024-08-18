@@ -1,0 +1,24 @@
+.privacybg{
+    background-image: url('../../assets/security.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+.policy{
+    background-image: url('../../assets/purplebg.png');
+    background-repeat: no-repeat;
+    background-position-y: 48vh;
+    background-position-x: -25vw;
+    background-size: contain;
+}
+
+@media screen and (min-width: 1024px) {
+    .policy{
+        background-position-y: 30vh;
+    }
+}
+@media screen and (min-width: 900px) {
+    .policy{
+        background-position-y: 10vh;
+    }
+}

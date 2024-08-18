@@ -1,0 +1,13 @@
+.judgeimage{
+    background-image: url('../../assets/purplebg.png');
+    background-repeat: no-repeat;
+    background-position: 5% 0;
+    border: none;
+    border-radius: 100%;
+    background-size: contain;
+    /* backdrop-filter: blur(10px); */
+}
+.reg{
+    background-image: var(--primary-color);
+    /* @apply py-[.3rem] px-[3rem] rounded-md */
+}

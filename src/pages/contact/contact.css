@@ -1,0 +1,17 @@
+.contactform{
+    background-image: url('../../assets/purplebg.png');
+    width: 100%;
+    height: 100vh;
+    background-position-x: -13rem;
+}
+@media screen and (max-width: 990px) {
+    .contactform{
+        /* background-repeat: no-repeat; */
+        background-position-x: -30rem;
+    }
+}
+@media screen and (max-width: 765px) {
+    .contactform{
+        background-repeat: no-repeat;
+    }
+}

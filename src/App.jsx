@@ -9,7 +9,9 @@ function App() {
   const [count, setCount] = useState(0)
   useEffect(() =>{
     AOS.init({
-      duration: 1200, // Duration of animation in milliseconds
+      duration: 1500,  // Slower animation
+      offset: 120,     // Trigger animation slightly before the element is in view
+      easing: 'ease-in-out', // Duration of animation in milliseconds
       once: true,
     })
   }, [])

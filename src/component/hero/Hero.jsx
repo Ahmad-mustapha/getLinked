@@ -12,7 +12,9 @@ function Hero() {
 
   useEffect(() => {
     AOS.init({
-      duration: 1200,
+      duration: 1500,  // Slower animation
+      offset: 120,     // Trigger animation slightly before the element is in view
+      easing: 'ease-in-out',
       once: true,
     });
   }, []);

@@ -27,7 +27,7 @@ const toggleFaq = (index) =>{
 
   return(
     <div 
-      
+      id='faq'
       className={`font-sans text-white`}>
      <ul>
         {questions.map((ques, index) => (

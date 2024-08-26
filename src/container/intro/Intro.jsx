@@ -17,7 +17,7 @@ function Intro() {
   }, []);
 
   return (
-    <div className=''>
+    <div id='overview' className=''>
       <div className='relative font-sans flex items-center md:text-left text-center flex-col md:flex-row gap-10 border-b-[1px] border-[#c5c4c4] overflow-x-hidden'>
         <div data-aos="fade-right" className='w-full p-8 flex items-center justify-center md:w-3/6'><img src={Bigidea} alt="" /></div>
         <div data-aos="fade-left" className='w-full p-8 sm:4/6 md:w-4/6'>

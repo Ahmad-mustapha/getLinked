@@ -12,7 +12,7 @@ function Hero() {
 
   useEffect(() => {
     AOS.init({
-      duration: 1500,  // Slower animation
+      duration: 500,  // Slower animation
       offset: 120,     // Trigger animation slightly before the element is in view
       easing: 'ease-in-out',
       once: true,
@@ -20,13 +20,16 @@ function Hero() {
   }, []);
 
   return (
-    <div className='getLinked__hero mt-[6rem] border-b-[1px] border-[#c5c4c4] overflow-x-hidden'>
+    <div className='getLinked__hero mt-[6rem] border-b-[1px] border-[#c5c4c4] overflow-hidden'>
       <div className="getLinked__heading-para">
         <p className='text-white text-right font-sans lg:text-[1.6rem] md:1.4rem text-[.9rem] font-bold'><i>Igniting a Revolution in HR Innovation</i></p>
         <img src={Vector} className='w-[7rem] md:w-[10rem]'/>
       </div>
       <div className="hero flex lg:flex-row items-start justify-between">
-        <div data-aos="fade-up" className='col1 lg:w-3/6 w-full pl-0 md:pl-[5rem]'>
+        <div 
+        data-aos="fade-up" 
+        data-aos-delay="500" 
+        className='col1 lg:w-3/6 w-full pl-0 md:pl-[5rem]'>
           <div className="getLinkedTechHackathon__heading flex items-end">
             <p className='text-center'>getlinked Tech <br /> Hackathon<span>1.0</span></p>
             <div className='flex'>
@@ -43,7 +46,9 @@ function Hero() {
           </div>
         </div>
         <div  
-        data-aos="zoom-in"
+        data-aos="zoom-in" 
+        data-aos-delay="500"
+        
         // data-aos="fade-up"
          className="lg:w-3/6  md:w-5/6 md:m-auto w-full pt-[3rem] px-[.5rem] overflow-y-hidden flex items-center text-center md:mt-0 mt-[3rem]">
           <img src={HeroImage} alt="hakathonGuy" className='w-full'/>

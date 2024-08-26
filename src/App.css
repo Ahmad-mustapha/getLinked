@@ -13,6 +13,9 @@
 body{
    @apply bg-[var(--background-color)]
 }
+body{
+  scroll-behavior: smooth;
+}
 span{
     color: var(--header-color);
 }

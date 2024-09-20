@@ -2,16 +2,8 @@ import React, { useEffect } from 'react'
 import { Navbar } from '../../component/import'
 import { Link } from 'react-router-dom'
 import Registerimg from '../../assets/registerimage.png'
-import AOS from 'aos'
 
 const Register = () => {
-  useEffect(() => {
-    AOS.init({
-      duration: 1200,
-      once: true,
-    });
-  }, []);
-
   return (
     <div>
       <Navbar />
@@ -55,7 +47,7 @@ const Register = () => {
             </div>
             <div className='text-center'><button className='font-sans text-white register'>Submit</button></div>
           
-            <p className='md:text-[13px] text-[9px] text-[#D434FE] mt-4'>Please review your registration details before submitting</p>
+            <p className='md:text-[13px] text-[9px] text-[#D434FE] font-[600] mt-4'>Please review your registration details before submitting</p>
             <div className='flex items-center gap-2 mt-2'>
               <input type="checkbox" name="" id="" className='outline-none border-[1px] border-white'/>
               <p className='text-white md:text-[13px] text-[9px]'>I agreed with the event terms and conditions  and privacy policy</p>

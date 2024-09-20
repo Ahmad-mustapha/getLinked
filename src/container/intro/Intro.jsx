@@ -6,16 +6,6 @@ import AOS from 'aos'
 
 
 function Intro() {
-
-  useEffect(() => {
-    AOS.init({
-      duration: 1500,  // Slower animation
-      offset: 120,     // Trigger animation slightly before the element is in view
-      easing: 'ease-in-out',
-      once: true,
-    });
-  }, []);
-
   return (
     <div id='overview' className=''>
       <div className='relative font-sans flex items-center md:text-left text-center flex-col md:flex-row gap-10 border-b-[1px] border-[#c5c4c4] overflow-x-hidden'>

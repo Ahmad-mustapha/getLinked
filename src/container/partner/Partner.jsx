@@ -48,13 +48,6 @@ export const Row = ({ first, second, third }) =>{
 }
 
 function Partner() {
-  useEffect(() => {
-    AOS.init({
-      duration: 1200,
-      once: true,
-    });
-  }, []);
-
   return (
     <div className='w-[5/6] mt-10 py-16 px-6 font-sans flex items-center justify-center flex-col border-b-[1px] border-[#c5c4c4] overflow-x-hidden' >
       <div data-aos='zoom-in' className='flex flex-col gap-4 justify-center items-center text-center text-white'>

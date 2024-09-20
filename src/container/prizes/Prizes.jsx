@@ -35,14 +35,7 @@ export const Winner = ({medal}) =>{
 }
 
 const Prizes = () => {
-  useEffect(() => {
-    AOS.init({
-      duration: 1200,
-      once: true,
-    });
-  }, []);
   return (
-    // <div className='prizebg p-6 font-sans bg-[#130d24]'>
       <div className='flex items-center justify-center gap-8 flex-col md:flex-row overflow-hidden'>
         <div data-aos='zoom-out' className='w-full flex justify-center items-center md:w-2/6'><img src={Award} alt="" /></div>
         <div className='md:w-3/6 lg:w-3/6 p-10 '>
@@ -57,7 +50,6 @@ const Prizes = () => {
           </div>
         </div>
       </div>
-    // </div>
   )
 }
 

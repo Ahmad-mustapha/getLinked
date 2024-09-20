@@ -6,13 +6,6 @@ import './privacy.css'
 import AOS from 'aos'
 
 const Privacy = () => {
-  useEffect(() => {
-    AOS.init({
-      duration: 1200,
-      once: true,
-    });
-  }, []);
-
   return (
     <div className='py-16 pl-4 md:pl-16 pr-4 font-sans flex flex-col md:flex-row justify-center gap-6 overflow-x-hidden'>
       <div className='w-full md:w-3/6'>

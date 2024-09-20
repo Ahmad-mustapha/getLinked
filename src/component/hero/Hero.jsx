@@ -9,16 +9,6 @@ import AOS from 'aos'
 import { Link } from 'react-router-dom'
 
 function Hero() {
-
-  useEffect(() => {
-    AOS.init({
-      duration: 500,  // Slower animation
-      offset: 120,     // Trigger animation slightly before the element is in view
-      easing: 'ease-in-out',
-      once: true,
-    });
-  }, []);
-
   return (
     <div className='getLinked__hero mt-[6rem] border-b-[1px] border-[#c5c4c4] overflow-hidden'>
       <div className="getLinked__heading-para">

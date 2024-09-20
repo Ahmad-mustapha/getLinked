@@ -6,12 +6,6 @@ import AOS from 'aos'
 
 export const Eachfaq = () =>{
 const [ openFaq, setopenFaq ] = useState(Array(6).fill(false))
-  useEffect(() => {
-    AOS.init({
-      duration: 1200,
-      once: true,
-    });
-  }, []);
 
 const questions = [
   {question: 'Can I work on a project I started before the hackathon?', answer : ''},

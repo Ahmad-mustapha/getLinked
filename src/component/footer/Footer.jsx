@@ -6,16 +6,8 @@ import { FaFacebookF } from "react-icons/fa";
 import { BiSolidPhoneCall } from "react-icons/bi";
 import { FaLocationDot } from "react-icons/fa6";
 import { Link } from 'react-router-dom';
-import AOS from 'aos'
 
 function Footer() {
-  useEffect(() => {
-    AOS.init({
-      duration: 1200,
-      once: true,
-    });
-  }, []);
-
   return (
     <div className='p-10 sm:p-20 md:p-24 lg:p-28 font-sans flex items-center justify-center flex-col bg-[#120c23] overflow-x-hidden'>
       <div className='flex flex-wrap w-full gap-6 sm:ga-8 md:gap-10 lg:gap--20 '>
@@ -25,7 +17,7 @@ function Footer() {
             established by a group of organizations with the aim of showcasing 
             young and talented individuals in the field of technology
           </p>
-          <p className='text-white text-[12px] mb-8 md:mb-0 flex gap-2 mt-10'>Terms of Use  <p className='h-[1.4rem] w-[.1rem] bg-[#D434FE]'></p>   Privacy Policy</p>
+          <p className='text-white text-[12px] mb-8 md:mb-0 flex gap-2 mt-10'>Terms of Use  <span className='h-[1.4rem] w-[.1rem] bg-[#D434FE]'></span>   Privacy Policy</p>
         </div>
         <ul data-aos='fade-down' className='flex flex-col gap-2'>
           <li className='text-[#D434FE] text-[14px] font-[700]'>Useful Links</li>
